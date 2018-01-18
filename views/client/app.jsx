@@ -5,10 +5,15 @@ const doneReact = require('../../lib/doneReact');
 
 class ClientApp extends React.Component {
   render() {
-    return <section>
-             <h2>Deposit Intel Here:</h2>
-             <IntelSubmitForm />
-           </section>;
+    return <div id="main">
+             <div className="header">
+               <h1>Intelli API</h1>
+             </div>
+             <div className="content">
+               <h2 className="content-subhead center">Deposit Intel Here</h2>
+               <IntelSubmitForm />
+             </div>
+           </div>;
   }
 }
 

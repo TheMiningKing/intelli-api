@@ -28,7 +28,7 @@ describe('client', () => {
   describe('UI', () => {
     it('has a friendly greeting', () => {
       browser.assert.text('h1', 'Intelli API');
-      browser.assert.text('h2', 'Deposit Intel Here:');
+      browser.assert.text('h2', 'Deposit Intel Here');
     });
 
     it('has components to submit intelligence', () => {
