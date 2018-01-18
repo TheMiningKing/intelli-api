@@ -27,17 +27,25 @@ class IntelSubmitForm extends React.Component {
   }
 
   render() {
-    return <form id="intel-submit" onSubmit={this.handleSubmit}>
-             <label>
-               Intelli Wallet:
-               <input type="text" name="wallet" value={this.state.wallet} onChange={this.handleInputChange} />
-             </label>
-             <label>
-               Source:
-               <input type="url" name="source" value={this.state.source} onChange={this.handleInputChange} />
-             </label>
-             <input type="submit" value="Submit" />
-           </form>;
+    return <form id="intel-submit" className="pure-form pure-form-aligned" onSubmit={this.handleSubmit}>
+             <fieldset>
+               <div className="pure-control-group">
+                 <label htmlFor="wallet">Intelli Wallet</label>
+                 <input name="wallet" type="text" placeholder="0x0000..."
+                        value={this.state.wallet} onChange={this.handleInputChange} />
+                 <span className="pure-form-message-inline">Required</span>
+               </div>
+               <div className="pure-control-group">
+                 <label htmlFor="source">Source</label>
+                 <input name="source" type="url" placeholder="http://..."
+                        value={this.state.source} onChange={this.handleInputChange} />
+                 <span className="pure-form-message-inline">Required</span>
+               </div>
+               <div className="pure-controls">
+                 <button type="submit" className="pure-button pure-button-primary">Submit</button>
+               </div>
+           </fieldset>
+         </form>;
   }
 }
 
