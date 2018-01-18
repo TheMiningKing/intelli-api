@@ -31,15 +31,15 @@ class IntelSubmitForm extends React.Component {
              <fieldset>
                <div className="pure-control-group">
                  <label htmlFor="wallet">Intelli Wallet</label>
-                 <input name="wallet" type="text" placeholder="0x0000..."
+                 <input className="pure-g pure-u-1 pure-u-md-1-2"
+                        name="wallet" type="text" placeholder="0x0000..." required="required"
                         value={this.state.wallet} onChange={this.handleInputChange} />
-                 <span className="pure-form-message-inline">Required</span>
                </div>
                <div className="pure-control-group">
                  <label htmlFor="source">Source</label>
-                 <input name="source" type="url" placeholder="http://..."
+                 <input className="pure-g pure-u-1 pure-u-md-1-2"
+                        name="source" type="url" placeholder="http://..." required="required"
                         value={this.state.source} onChange={this.handleInputChange} />
-                 <span className="pure-form-message-inline">Required</span>
                </div>
                <div className="pure-controls">
                  <button type="submit" className="pure-button pure-button-primary">Submit</button>
