@@ -1,15 +1,13 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
+const IntelSubmitForm = require('./intelSubmitForm.jsx');
 const doneReact = require('../../lib/doneReact');
 
 class ClientApp extends React.Component {
-//  constructor() {
-//    super();
-//  }
-
   render() {
     return <section>
-             <h2>Hello, world!</h2>
+             <h2>Deposit Intel Here:</h2>
+             <IntelSubmitForm />
            </section>;
   }
 }
